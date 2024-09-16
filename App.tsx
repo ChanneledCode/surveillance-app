@@ -137,7 +137,7 @@ const App = () => {
   }, [stream, authToken, initializeConnection]); // Removed initializeConnection from dependencies
 
   // Cleanup resources when the component unmounts
-  useEffect(() => {
+  useEffect(() => { 
     return () => {
       if (stream) {
         stream.getTracks().forEach((track) => track.stop());
